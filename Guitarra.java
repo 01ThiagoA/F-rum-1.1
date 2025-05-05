@@ -1,18 +1,15 @@
-package unidade_1;
-
-// Declaração de classe
-public class Guitarra {
+// Classe Guitarra
+class Guitarra {
     private String numeroSerie, fabricante, modelo, tipo, madeira;
     private double preco;
 
-    //Criação do contrutor da classe Guitarra
     public Guitarra(
             String numeroSerie,
             String fabricante,
             String modelo,
             String tipo,
             String madeira,
-            double preço
+            double preco
     ){
         this.numeroSerie = numeroSerie;
         this.fabricante = fabricante;
@@ -21,6 +18,7 @@ public class Guitarra {
         this.madeira = madeira;
         this.preco = preco;
     }
+
     public String getNumeroSerie(){
         return numeroSerie;
     }
@@ -43,7 +41,7 @@ public class Guitarra {
         return tipo;
     }
     public void setTipo(String tipo){
-        this.tipo =tipo;
+        this.tipo = tipo;
     }
     public String getMadeira(){
         return madeira;
@@ -51,22 +49,23 @@ public class Guitarra {
     public void setMadeira(String madeira){
         this.madeira = madeira;
     }
-    public Double getPreco(){
+    public double getPreco(){
         return preco;
     }
-    public void setPreco(Double preco){
+    public void setPreco(double preco){
         this.preco = preco;
     }
-
-    public static void main(String[] args) {
-
-        Guitarra minhaGuitarra = new Guitarra("01020304", "fender", "telecaster", "eletrica", "mogno", 1500);
-
-        System.out.println(minhaGuitarra.getNumeroSerie());
-        System.out.println(minhaGuitarra.getMadeira());
-        System.out.println(minhaGuitarra.getPreco());
-        System.out.println(minhaGuitarra.getTipo());
-    };
-
-
 }
+
+// Classe principal para rodar o programa
+public class Main {
+    public static void main(String[] args) {
+        Guitarra minhaGuitarra = new Guitarra("01020304", "Fender", "Telecaster", "Elétrica", "Mogno", 1500);
+
+        System.out.println("Número de Série: " + minhaGuitarra.getNumeroSerie());
+        System.out.println("Madeira: " + minhaGuitarra.getMadeira());
+        System.out.println("Preço: R$ " + minhaGuitarra.getPreco());
+        System.out.println("Tipo: " + minhaGuitarra.getTipo());
+    }
+}
+
